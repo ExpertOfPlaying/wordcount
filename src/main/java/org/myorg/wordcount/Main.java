@@ -78,6 +78,8 @@ public class Main {
         }
         FileOutputFormat.setOutputPath(job_longest_word_sort, outDir);
 
+        job_longest_word_sort.getConfiguration().set("mapreduce.output.textoutputformat.encoding", "UTF-8");
+
         System.exit(job_longest_word_sort.waitForCompletion(true) ? 0 : 1);
     }
 }

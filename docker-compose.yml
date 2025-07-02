@@ -1,0 +1,13 @@
+services:
+  hadoop:
+    image: my-hadoop:dev-autostart
+    container_name: hadoop-dev
+    privileged: true
+    volumes:
+      - ./shared:/data   # host ./shared ↔ container /data
+      - ./target/wordcount-1.0-SNAPSHOT.jar:/tmp/wordcount-1.0-SNAPSHOT.jar
+    ports:
+      - "9870:9870"   # Web UI for HDFS
+      - "8088:8088"   # Web UI for YARN
+    tty: true
+    stdin_open: true
