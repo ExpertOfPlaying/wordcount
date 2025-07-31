@@ -5,7 +5,7 @@ This project finds the longest word for each language in a text corpus using Had
 
 ---
 
-## 📝 Input Format
+## Input Format
 
 The input directory **must** group files by language in subfolders (the folder names will be used as the language key):
 
@@ -36,7 +36,7 @@ This creates target/wordcount-1.0-SNAPSHOT.jar
 
 ### 3. Prepare Input Data
 
-Place your text files in shared/input/texts/, grouped by language as above.
+Place your text files in `shared/input/texts/`, grouped by language as above.
 
 ### 4. Start Hadoop Cluster
 
@@ -77,7 +77,7 @@ Or copy output to your host:
 hdfs dfs -get /output/longestwords /shared/output/
 ```
 
-View on host: shared/output/longestwords/part-r-00000
+View on host: `shared/output/longestwords/part-r-00000`
 
 ## Running Unit Tests
 
@@ -86,8 +86,8 @@ Run on your host:
 mvn test
 ```
 
-LongestWordMapperTest.java: Mapper test.
-LongestWordReducerTest.java: Reducer test.
+- `LongestWordMapperTest.java`: Mapper test.
+- `LongestWordReducerTest.java`: Reducer test.
 
 ## How the Code Works
 
@@ -124,7 +124,7 @@ HDFS command not found?
 Make sure you are inside the namenode container.
 
 Job not found?
-Make sure /target/wordcount-1.0-SNAPSHOT.jar exists.
+Make sure `/target/wordcount-1.0-SNAPSHOT.jar` exists.
 
 ## Example Output
 
